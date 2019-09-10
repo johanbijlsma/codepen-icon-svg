@@ -230,12 +230,28 @@ body {
 		margin: -8px;
 		padding: 18px;
 		border-bottom: 2px darkslategray solid;
-		display: block;
-		top: 3;
+		display: flex;
+		position: sticky;
+		top: 3px;
 		width: 100%;
-		text-align: right;
+		flex-direction: row;
+		justify-content: flex-start;
+		h1 {
+			margin-right: 200px;
+		}
 		div {
 			color: #fff;
+			margin: 0.96em;
+			&.docs {
+				@include svgLoader($home-svg, dodgerblue);
+			}
+			&.demo {
+				@include svgLoader($party-svg, dodgerblue);
+			}
+			&:hover {
+				cursor: pointer;
+				color: dodgerblue;
+			}
 		}
 	}
 }
